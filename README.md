@@ -7,7 +7,7 @@ This project involved the use of ETL methods in combination with PySpark in Pyth
 The purpose of this project is to analyze the corpora of review datasets for latent biases.  Since the reviewers in question are being compensated by Amazon for their reviews, there is a strong basis for suspecting that they might exhibit some form of favoritism in exchange.   
 
 ## Results 
-From the list of available datasets, the set containing data for reviews of "Digital_Video_Games" was selected for analysis.  An RDS instance was created to store this data using the Amazon Web Services hosting service, which was then linked to an SQL database.  Using a series of queries, four tables were generated inside of pdAdmin 4 -- "review_id_table", "customers_table", "products_table", and "vine_table" which contained information specifically regarding reviews submitted as part of the Vine program.  These tables were inspected preliminarily before being recreated using Python 3 inside of Google Collab.  From there, the recreated tables were serially filtered until the most significant data remained; namely, the "vine_table" table filtered down to a minimum 50% distribution of reviews voted as "helpful" by at least 20 users.  This filtering was performed to improve the quality opf the data for more detailed analysis.  
+From the list of available datasets, the set containing data for reviews of ["Digital_Video_Games"](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Digital_Video_Games_v1_00.tsv.gz) was selected for analysis.  An RDS instance was created to store this data using the Amazon Web Services hosting service, which was then linked to an SQL database.  Using a series of queries, four tables were generated inside of pdAdmin 4 -- "review_id_table", "customers_table", "products_table", and "vine_table" which contained information specifically regarding reviews submitted as part of the Vine program.  These tables were inspected preliminarily before being recreated using Python 3 inside of Google Collab.  From there, the recreated tables were serially filtered until the most significant data remained; namely, the "vine_table" table filtered down to a minimum 50% distribution of reviews voted as "helpful" by at least 20 users.  This filtering was performed to improve the quality opf the data for more detailed analysis.  
 
 ![f1](/Images/f1.png)
 
@@ -30,7 +30,7 @@ From the list of available datasets, the set containing data for reviews of "Dig
     - Total Five Star Non-Vine Reviews = 582
 
   - What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
-    - Percentage Five Star Vine Reviews = [DIVIDE BY ZERO ERROR]
+    - Percentage Five Star Vine Reviews = DIVIDE BY ZERO ERROR
     - Percentage Five Star Non-Vine Reviews = ~37%
 
 ## Summary
